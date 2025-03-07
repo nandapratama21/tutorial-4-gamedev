@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfd7edjm1slca"]
+
+[ext_resource type="Script" path="res://scenes/frog_lose.gd" id="1_a7e80"]
+[ext_resource type="Texture2D" uid="uid://bnbtxha7un1pp" path="res://assets/kenney_platformerpack/PNG/Enemies/frog_dead.png" id="2_uyvwd"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ekkne"]
+radius = 56.987
+height = 132.126
+
+[node name="FrogLose" type="RigidBody2D"]
+rotation = 3.13842
+script = ExtResource("1_a7e80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-13.1237, 38.9586)
+rotation = -2.41417
+texture = ExtResource("2_uyvwd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.08247, 25.9903)
+shape = SubResource("CapsuleShape2D_ekkne")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

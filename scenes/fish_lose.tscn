@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://ooq3ufhjg1q0"]
+
+[ext_resource type="Script" path="res://scenes/fish_lose.gd" id="1_6juw0"]
+[ext_resource type="Texture2D" uid="uid://bivk5n8i3vnqc" path="res://assets/kenney_platformerpack/PNG/Enemies/fishBlue.png" id="2_fq8ww"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ekkne"]
+radius = 47.0
+height = 108.0
+
+[node name="FishLose" type="RigidBody2D"]
+rotation = 3.13842
+script = ExtResource("1_6juw0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_fq8ww")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, 0)
+shape = SubResource("CapsuleShape2D_ekkne")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

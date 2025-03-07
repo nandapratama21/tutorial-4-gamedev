@@ -53,6 +53,11 @@ jump={
 ]
 }
 
+[layer_names]
+
+2d_render/layer_1="a"
+2d_render/layer_2="b"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"

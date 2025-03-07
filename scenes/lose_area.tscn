@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://drsvxv5aphx3l"]
+
+[ext_resource type="PackedScene" uid="uid://dacrnnhdw3322" path="res://scenes/area_2d.tscn" id="1_f140u"]
+[ext_resource type="Script" path="res://scenes/LoseArea.gd" id="2_88vms"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uc4il"]
+
+[node name="LoseArea" instance=ExtResource("1_f140u")]
+script = ExtResource("2_88vms")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="0"]
+shape = SubResource("RectangleShape2D_uc4il")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
