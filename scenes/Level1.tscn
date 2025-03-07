@@ -25,13 +25,14 @@ texture = ExtResource("3_t5oin")
 
 [node name="WinArea" parent="Sprite2D" instance=ExtResource("4_lgufk")]
 scale = Vector2(13.96, 24.24)
-sceneName = "WinScreen"
+scene_name = "WinScreen"
 
 [node name="LoseArea" parent="." instance=ExtResource("4_lgufk")]
 position = Vector2(935, 789)
 scale = Vector2(217.52, 1)
-sceneName = "Level1"
+scene_name = "Level1"
 
 [node name="Spawner" type="Node2D" parent="."]
+position = Vector2(447, -281)
 script = ExtResource("5_76kn4")
 obstacle = ExtResource("6_m2n4g")

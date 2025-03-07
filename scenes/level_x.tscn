@@ -72,7 +72,7 @@ position = Vector2(2055, -325)
 [node name="LoseArea" parent="." instance=ExtResource("5_agabf")]
 position = Vector2(3574, 224)
 scale = Vector2(259.822, 3.3196)
-sceneName = "level_x"
+scene_name = "level_x"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(3530, -950)
@@ -80,4 +80,4 @@ texture = ExtResource("8_ab0ae")
 
 [node name="WinArea" parent="Sprite2D" instance=ExtResource("5_agabf")]
 scale = Vector2(13.96, 24.24)
-sceneName = "WinScreen"
+scene_name = "WinScreen"

@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-@export var sceneName = "LoseScreen"
+@export var scene_name = "LoseScreen"
 
 
 func _ready():
