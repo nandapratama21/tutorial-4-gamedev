@@ -18,18 +18,18 @@ func get_input():
 func _physics_process(delta):
 	velocity.y += delta * gravity
 	get_input()
-	
+
 	# Handle bouncing off enemies
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-		
+
 		if "SlimeGreen" in collider.name:
 			# If player is above the enemy (player.y < enemy.y)
 			if global_position.y < collider.global_position.y - 10:  # -10 provides some leeway
 				# Apply a small upward boost when stomping on enemy
 				velocity.y = jump_speed / 2
-	
+
 	move_and_slide()
 
 

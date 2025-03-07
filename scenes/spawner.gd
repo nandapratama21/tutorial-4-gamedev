@@ -1,9 +1,11 @@
 extends Node2D
 
-@export var obstacle : PackedScene
+@export var obstacle: PackedScene
+
 
 func _ready():
 	repeat()
+
 
 func spawn():
 	var spawned = obstacle.instantiate()
@@ -13,6 +15,7 @@ func spawn():
 	spawn_pos.x = spawn_pos.x + randf_range(-1000, 1000)
 
 	spawned.global_position = spawn_pos
+
 
 func repeat():
 	spawn()
